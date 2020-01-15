@@ -6,13 +6,15 @@
 	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
-	<div>
-	<h1>Blog da Jamys</h1>
+	<div class="cabecalho">
+		<h1><i>Blog da Jamys</i></h1>
 	</div>
+	
 	{% for post in posts %}
-		<div>
-			<p>publicado em: {{post.publish_date}}</p>
-			<h1>{{post.title}}</h1>
+	
+		<div class="post">
+			<p class="data">publicado em: {{post.publish_date}}</p>
+			<h1 class="posttitle">{{post.title}}</h1>
 			<p>{{post.text|linebreaksbr}}</p>
 		</div>
 	{% endfor %}

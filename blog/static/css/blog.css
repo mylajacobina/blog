@@ -1,3 +1,21 @@
 h1{
 	color: blue;
 }
+
+.cabecalho{
+	width: 500 px;
+	height: 250px;
+	background-color:#cc66ff;
+}
+
+.post{
+	width: 500 px;
+	height: 250px;
+	background-color:#ffccff;
+}
+.posttitle{
+	color:#ff1a1a;
+}
+.data{
+	text-align: right;
+}
