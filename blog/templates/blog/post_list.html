@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-	<link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet">
-</head>
-<body>
-	<div class="cabecalho">
-		<h1><i>Blog da Jamys</i></h1>
-	</div>
-	
+{% extends 'blog/base.html' %}
+
+{% block dinamico %}
+
 	{% for post in posts %}
 	
 		<div class="post">
 			<p class="data">publicado em: {{post.publish_date}}</p>
-			<h1 class="posttitle">{{post.title}}</h1>
+			<h1 class="posttitle">
+			    <a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a>
+			</h1>
 			<p>{{post.text|linebreaksbr}}</p>
 		</div>
 	{% endfor %}
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'noticia/basenot.html' %}
+
+{% block dinamico %}
+{% if user.is_authenticated %}
+	<h1>Nova Area</h1>
+	<form method="POST" >{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="save btn-default">Salvar</button>
+		
+	</form>	
+{% else %}
+	<h1>Área Restrita</h1>
+{% endif %}
+	{% endblock %}

@@ -1,0 +1,36 @@
+h1{
+	color: #1a0000;
+}
+
+.cabecalho{
+	width: 90%;
+	height: 80px;
+	background-color:#ff0066;
+	font-family: 'IM Fell Great Primer SC', serif;
+	margin-left: 5%;
+
+}
+
+.links{
+	background-color: #737373;
+	height: 40px;
+}
+
+.conteudo{
+	width: 90%;
+	margin-left: 5%;
+}
+.post{
+	width: 500 px;
+	height: 250px;
+	background-color:#ffccff;
+}
+.posttitle{
+	color:#ff1a1a;
+}
+.data{
+	text-align: right;
+}
+.menu{
+	color:#50C7C7
+}

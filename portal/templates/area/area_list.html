@@ -1,0 +1,14 @@
+{% extends 'noticia/basenot.html' %}
+
+{% block dinamico %}
+
+	{% for area in areas %}
+	
+		<div class="area">
+			<a href="{% url 'detalhesdaarea' pk=area.pk %}">
+		    	<p class="areastatus"> {{area.descricao}} </p>
+		    </a>
+			<p>{{area.status}}</p>
+		</div>
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+
+</head>
+<body>
+	<div class="area">
+		
+		{% if user.is_authenticated %}
+		<a href="{% url 'nova_area' %}">Nova Area</a>
+		{% endif %}	
+	</div>
+	<div class="listaarea">
+		{% if user.is_authenticated %}
+		<a href="{% url 'area_list' %}">Home</a>
+		{% endif %}
+	</div>
+	
+	{% block dinamico %}
+	{% endblock %}
+</body>
+</html>

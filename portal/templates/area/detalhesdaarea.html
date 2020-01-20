@@ -1,0 +1,16 @@
+{% extends 'noticia/basenot.html' %}
+
+{% block dinamico %}
+	<div class="area">
+		{% if user.is_authenticated %}
+		<a href="{% url 'area_edit' pk=area.pk %}">Editar</a>
+		<a onclick = "return confirm('Deseja realmente apagar?')" href="{% url 'remover_area' pk=area.pk %}">Deletar Area</a>
+		{% endif %}
+		
+		
+
+		<p>{{area.status}}</p>
+		<p>{{area.descricao}}</p>		
+	</div>
+		
+{% endblock %}

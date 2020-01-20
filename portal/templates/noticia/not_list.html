@@ -1,0 +1,15 @@
+{% extends 'noticia/basenot.html' %}
+
+{% block dinamico %}
+
+	{% for noticia in noticias %}
+	
+		<div class="noticia">
+			<p class="data">publicado em: {{noticia.data_publicacao}}</p>
+			<h1 class="noticiatitle">
+			    <a href="{% url 'detalhesdasnot' pk=noticia.pk %}">{{noticia.titulo}}</a>
+			</h1>
+			<p>{{noticia.texto|linebreaksbr}}</p>
+		</div>
+	{% endfor %}
+{% endblock %}
